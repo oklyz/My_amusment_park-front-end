@@ -10,3 +10,9 @@ header {
   height: 15%;
   display: flex;
 }
+
+.sign-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

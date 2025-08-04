@@ -6,7 +6,7 @@ function Header() {
       <NavLink to="/">Home</NavLink>
       <NavLink to="/Games">Games</NavLink>
       <NavLink to="/Services">Services</NavLink>
-      <NavLink to="/Buy-Ticket">Tickets</NavLink>
+      <NavLink to="/buy-tickets">Tickets</NavLink>
       <NavLink to="/sign-up">Sign-up</NavLink>
       <NavLink to="/sign-in">Sign-in</NavLink>
       <NavLink to="/sign-out">Sign-Out</NavLink>
