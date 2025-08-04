@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "image":"https://snpbooks.org/wp-content/uploads/2024/03/BVC-Store-Front-2024.jpg",
+    "name": "Park Gift Shop",
+    "description": "A shop offering park-themed souvenirs, local crafts, and gift items.",
+    "availability": "Daily, 9:00 AM - 7:00 PM",
+    "cost": "Varies by item ($5 - $100)"
+  },
+  {
+    "id": 2,
+    "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABQf2E6PQVGxlYmioq7AwCyUerDbo0Ek4Eg&s",
+    "name": "Lakeview Bistro Restaurant",
+    "description": "American restaurant,casual dining with burgers, salads, and sandwiches overlooking the park lake.",
+    "availability": "Daily, 11:00 AM - 9:00 PM",
+    "cost": "$12 - $25 per meal"
+  },
+  {
+    "id": 3,
+    "image":"https://eu-assets.simpleview-europe.com/cheltenham2017/imageresizer/?image=%2Fdmsimgs%2FMeadow_Cafe_Sandford_Park_Cheltenham1_1416290783.JPEG&action=ProductDetail",
+    "name": "Meadow Cafe Restaurant",
+    "description": "Italian restaurant,cozy cafe with wood-fired pizzas, pastas, and desserts.",
+    "availability": "24 hours",
+    "cost": "$10 - $20 per meal"
+  },
+  {
+    "id": 4,
+    "image":"https://ideagirlcanada.wordpress.com/wp-content/uploads/2013/10/trailside-bar-grill-its-five-oclock-somewhere-282-ridge-rd-n-ridgeway-on-289-876-8000.jpg",
+    "name": "Trailside Tacos Restaurant",
+    "description": "Mexican restaurant,quick-service taco stand with fresh tacos, burritos, and nachos.",
+    "availability": "Daily, 10:00 AM - 6:00 PM",
+    "cost": "$8 - $15 per meal"
+  },
+  {
+    "id": 5,
+    "image":"https://my.clevelandclinic.org/-/scassets/images/org/locations/wayfinding/family-medicine-brook-park?mw=430&hash=32639AEC1EEB16D458C84DFC43977123825DC52C",
+    "name": "Park Clinic",
+    "description": "On-site medical clinic for minor injuries and health consultations.",
+    "availability": "Daily, 8:00 AM - 6:00 PM",
+    "cost": "$50 - $150 per visit"
+  }
+]

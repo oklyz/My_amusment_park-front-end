@@ -1,8 +1,16 @@
-import React from 'react'
+import gamesList from '../gamesList.json'
+import GameCard from '../components/GameCard'
 
-function Games() {
+const Games=()=> {
   return (
-    <div>Games</div>
+    <div>
+      <h1>Game List</h1>
+      <div>
+        {gamesList.map((game)=>(
+          <GameCard game={game} key={game.id}/>
+        ))}
+      </div>
+    </div>
   )
 }
 
