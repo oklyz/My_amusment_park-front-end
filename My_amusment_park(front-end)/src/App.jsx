@@ -2,12 +2,15 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import gamesList from './gamesList.json'
+import Games from "./pages/Games"
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 function App() {
   return (
     <>
       <Header />
+    <Games/>
       <Routes>
         <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
@@ -16,6 +19,7 @@ function App() {
         <Route path="/"></Route>
         <Route path="/Games" element={<Games />}></Route>
       </Routes>
+
     </>
   );
 }
