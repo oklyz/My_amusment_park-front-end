@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Games from "../pages/Games";
 
-const SignIn = ({ setUser }) => {
-  const initialState = { email: "", password: "" };
-
+const SignIn = ({setUser}) => {
+  const initialState = { email: "",firstname:'',lastname:'', password: "" };
   const [formValues, setFormValues] = useState(initialState);
   let navigate = useNavigate();
   const handleChange = (e) => {
@@ -16,13 +14,12 @@ const SignIn = ({ setUser }) => {
     const payload = await SignInUser(formValues);
     setFormValues(initialState);
     setUser(payload);
-    navigate("/");
+    navigate("/Games");
   };
 
   return (
-    <div className="col signin">
-      <img src="/images/signin.png" alt="Sign In" />
-      <form className="col" onSubmit={handleSubmit}>
+    <div className='sign-form'>
+      <form className="sign-form" onSubmit={handleSubmit}>
         <div className="input-wrapper">
           <label htmlFor="email">Email</label>
           <input

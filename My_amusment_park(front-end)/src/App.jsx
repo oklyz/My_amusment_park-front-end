@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
+import Games from "./pages/Games";
+import BuyTicket from './pages/BuyTicket'
 function App() {
   return (
     <>
@@ -12,9 +14,9 @@ function App() {
         <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/sign-out"></Route>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/"></Route>
-        <Route path="/Games" element={<Games />}></Route>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/buy-tickets" element={<BuyTicket/>}></Route>
+        <Route path="/Games" element={<Games/>}></Route>
       </Routes>
     </>
   );
