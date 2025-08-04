@@ -1,3 +1,5 @@
+import Auth from "./Auth";
+
 const Home = () => {
   return (
     <>
