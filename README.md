@@ -15,7 +15,7 @@
 
 ### Breif Description
 
-#### a visitor should sign in to buy a ticket then 
+#### a website where the visitor is able to create and account , observe the games and services of amusment park and buy tickets.
 
 ---
 
