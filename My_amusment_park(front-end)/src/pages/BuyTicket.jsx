@@ -1,7 +1,11 @@
 import React from "react";
 
 function BuyTicket() {
-  return <div>BuyTicket</div>;
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
 export default BuyTicket;
