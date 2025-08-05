@@ -39,7 +39,7 @@ const App=()=> {
         <Route path="/sign-in" element={<SignIn setUser={setUser} user={user}/>}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/sign-out"></Route>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home user={user}/>}></Route>
         <Route path="/Services" element={<Services/>}></Route>
         <Route path="/Games" element={<Games />}></Route>
         <Route path="/buy-tickets" element={<TicketForm/>}></Route>
