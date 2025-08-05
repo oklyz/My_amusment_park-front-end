@@ -6,6 +6,7 @@ import Games from "./pages/Games"
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Services from "./pages/Services";
+import TicketForm from "./components/TicketForm";
 import { CheckSession } from "./services/auth";
 import { useEffect, useState } from "react";
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/Services" element={<Services/>}></Route>
         <Route path="/Games" element={<Games />}></Route>
+        <Route path="/buy-tickets" element={<TicketForm/>}></Route>
       </Routes>
 
     </>
