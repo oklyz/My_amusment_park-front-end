@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SignInUser } from "../services/auth";
 
-const SignIn = ({setUser}) => {
-  const initialState = { email: "",firstname:'',lastname:'', password: "" };
+const SignIn = ({setUser, user}) => {
+  const initialState = { email: "", password: "" };
   const [formValues, setFormValues] = useState(initialState);
   let navigate = useNavigate();
   const handleChange = (e) => {
@@ -11,10 +12,12 @@ const SignIn = ({setUser}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const payload = await SignInUser(formValues);
-    setFormValues(initialState);
-    setUser(payload);
-    navigate("/Games");
+    if (!user) {
+      const payload = await SignInUser(formValues);
+      setFormValues(initialState);
+      setUser(payload);
+      navigate("/Games");
+    }
   };
 
   return (
