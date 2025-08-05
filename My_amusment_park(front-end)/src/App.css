@@ -9,6 +9,7 @@ header {
   background-color: gray;
   height: 15%;
   display: flex;
+  position: sticky; top: 0 ;
 }
 
 .sign-form{
@@ -16,3 +17,17 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+.game-card{
+  width: 20%;
+}
+
+.game-card img{
+  width: 100%;
+}
+
+.games-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
