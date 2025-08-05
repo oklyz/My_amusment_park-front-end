@@ -16,7 +16,7 @@ const SignIn = ({setUser, user}) => {
       const payload = await SignInUser(formValues);
       setFormValues(initialState);
       setUser(payload);
-      navigate("/Games");
+      navigate("/");
     }
   };
 
