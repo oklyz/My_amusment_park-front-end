@@ -1,6 +1,6 @@
 import React from "react";
 
-function ServicesCard({service}) {
+const ServicesCard=({service})=> {
   return( <div>
     <div>
       <img src={service.image} alt={`poster for ${service.name}`} />

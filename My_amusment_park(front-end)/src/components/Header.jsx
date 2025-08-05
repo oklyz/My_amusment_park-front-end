@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-function Header({ handleLogOut, user }) {
+const Header=({ handleLogOut, user })=> {
   
   let userOptions
 
@@ -12,6 +12,7 @@ function Header({ handleLogOut, user }) {
         <NavLink to="/Games">Games</NavLink>
         <NavLink to="/Services">Services</NavLink>
         <NavLink to="/buy-tickets">Tickets</NavLink>
+        <NavLink to='/profile' className='profile-button'>profile</NavLink>
       </header>
     )
   } else {

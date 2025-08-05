@@ -1,3 +1,4 @@
+
 import gamesList from '../gamesList.json'
 import { useState,useEffect } from "react";
 import { useParams } from 'react-router-dom'
@@ -23,6 +24,8 @@ function GameDetails() {
       <h3>Rating:{gameDetails.rating}</h3>
       </div>
       )
+
+
 }
 
 export default GameDetails;
