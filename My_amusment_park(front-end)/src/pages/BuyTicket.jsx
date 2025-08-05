@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import TicketForm from "../components/TicketForm";
+import TicketPay from "../components/TicketPay";
 
-const BuyTicket =()=> {
+const BuyTicket = () => {
+  const [submittedData, setSubmittedData] = useState(null);
+
+  if (submittedData) {
+    return <TicketPay values={submittedData} />;
+  }
+
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <TicketForm onSubmit={(data) => setSubmittedData(data)} />
+  );
+};
 
 export default BuyTicket;

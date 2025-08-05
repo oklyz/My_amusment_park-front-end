@@ -1,42 +1,52 @@
-import React from "react";
-import {useState} from 'react'
-const TicketForm =()=> {
+import React, { useState } from "react";
 
-  let today = new Date();
+const TicketForm = ({ onSubmit }) => {
   let tomorrow = new Date();
-  tomorrow.setDate(today.getDate() + 1);
-  today = today.toISOString().split('T')[0];
-  tomorrow = tomorrow.toISOString().split('T')[0];
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow = tomorrow.toISOString().split("T")[0];
 
-  const initialState = { type:"normal", date:today , amount:1  };
+  const initialState = { type: "normal", date: tomorrow, amount: 1 };
   const [formValues, setFormValues] = useState(initialState);
-  
-  const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.id]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formValues); 
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setFormValues(initialState);
-    console.log('worked')
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
   return (
-    <div>
-    <form className="ticket-form" onSubmit={handleSubmit}>
-    <label htmlFor="type">Type of ticket</label>
-    <select name="type" onChange={handleChange}>
-      <option value="Normal">Normal</option>
-      <option value="VIP">VIP</option>
-    </select>
-    <label htmlFor="date" min={tomorrow} >Select a date</label>
-    <input type="date" name="date" id="date" onChange={handleChange}/>
-    <label htmlFor="amount">How many tickets?</label>
-    <input type="number" name="amount" min={1} max={99}  onChange={handleChange}/>
-    <button type="submit">Proceed for payment</button>
+    <form onSubmit={handleSubmit}>
+      <label>Type of ticket</label>
+      <select name="type" value={formValues.type} onChange={handleChange}>
+        <option value="normal">Normal</option>
+        <option value="VIP">VIP</option>
+      </select>
+
+      <label>Select a date</label>
+      <input
+        type="date"
+        name="date"
+        min={tomorrow}
+        value={formValues.date}
+        onChange={handleChange}
+      />
+
+      <label>How many tickets?</label>
+      <input
+        type="number"
+        name="amount"
+        min={1}
+        max={99}
+        value={formValues.amount}
+        onChange={handleChange}
+      />
+
+      <button type="submit">Proceed for payment</button>
     </form>
-    </div>
-  ) 
-}
+  );
+};
 
 export default TicketForm;
