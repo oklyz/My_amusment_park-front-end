@@ -7,7 +7,7 @@ const Header=({ handleLogOut, user })=> {
   if (user) {
     userOptions = (
       <header>
-        <NavLink onClick={handleLogOut} to="/sign-out">Sign-Out</NavLink>
+        <NavLink onClick={handleLogOut} to="/">Sign-Out</NavLink>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/Games">Games</NavLink>
         <NavLink to="/Services">Services</NavLink>
