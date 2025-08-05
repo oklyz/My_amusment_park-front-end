@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TicketForm from "../components/TicketForm";
 import TicketPay from "../components/TicketPay";
 
-const BuyTicket = () => {
+const BuyTicket = ({user}) => {
   const [submittedData, setSubmittedData] = useState(null);
 
   if (submittedData) {
@@ -10,7 +10,7 @@ const BuyTicket = () => {
   }
 
   return (
-    <TicketForm onSubmit={(data) => setSubmittedData(data)} />
+    <TicketForm user={user} onSubmit={(data) => setSubmittedData(data) } />
   );
 };
 

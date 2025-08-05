@@ -43,7 +43,7 @@ const App=()=> {
         <Route path="/" element={<Home user={user}/>}></Route>
         <Route path="/Services" element={<Services/>}></Route>
         <Route path="/Games" element={<Games />}></Route>
-        <Route path="/buy-tickets" element={<BuyTicket/>}></Route>
+        <Route path="/buy-tickets" element={<BuyTicket user={user}/>}></Route>
         <Route path="Games/:id" element={<GameDetails/>}></Route>
         <Route path="/profile" element={<Profile user={user}/>}></Route>
 

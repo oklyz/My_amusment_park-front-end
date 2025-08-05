@@ -1,16 +1,23 @@
 import React, { useState } from "react";
+import { createTicket } from "../services/Ticket";
 
-const TicketForm = ({ onSubmit }) => {
+const TicketForm = ({ user }) => {
   let tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
   tomorrow = tomorrow.toISOString().split("T")[0];
 
-  const initialState = { type: "normal", date: tomorrow, amount: 1 };
+  
+  if (!user) {
+    return <p>Loading profile ...</p>
+  }
+
+  const initialState = { type: "Normal", date: tomorrow, amount: 1 , ownerId: user.id};
   const [formValues, setFormValues] = useState(initialState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formValues); 
+    console.log("Submitting ticket:", formValues)
+    createTicket(formValues)
   };
 
   const handleChange = (e) => {
@@ -21,7 +28,7 @@ const TicketForm = ({ onSubmit }) => {
     <form onSubmit={handleSubmit}>
       <label>Type of ticket</label>
       <select name="type" value={formValues.type} onChange={handleChange}>
-        <option value="normal">Normal</option>
+        <option value="Normal">Normal</option>
         <option value="VIP">VIP</option>
       </select>
 
