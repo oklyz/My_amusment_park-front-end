@@ -7,9 +7,7 @@ const GameCard=({game})=> {
       <div>
       <img src={game.image} alt={`poster for ${game.name}`} />
       </div>
-      <h3>Price:{`${game.entry_price}$`}</h3>
-      <h3>Minimum height:{`${game.minimum_height}cm`}</h3>
-      <h3>Rating:{game.rating}</h3>
+      <h2>{game.name}</h2>
     </div>
   )
 }
