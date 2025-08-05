@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import TicketForm from "./components/TicketForm";
 import { CheckSession } from "./services/auth";
 import { useEffect, useState } from "react";
+import GameDetails from "./pages/GameDetails.";
 
 function App() {
   const [user, setUser] = useState(null)
@@ -42,6 +43,7 @@ function App() {
         <Route path="/Services" element={<Services/>}></Route>
         <Route path="/Games" element={<Games />}></Route>
         <Route path="/buy-tickets" element={<TicketForm/>}></Route>
+        <Route path="Games/:id" element={<GameDetails/>}></Route>
       </Routes>
 
     </>
