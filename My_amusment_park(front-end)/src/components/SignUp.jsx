@@ -33,15 +33,12 @@ const SignUp = () => {
   }
 
   return (
-    <div className='sign-form'>
-      <img src='./image.png' alt="profile-picture" />
-      <form onSubmit={handleSubmit}>
-        <div className='image-holder'>
-          <label htmlFor="avatar">Profile Picture</label>
-          <input type="file" />
-        </div>
+    <div className='sign-form-up'>
+      
+      <form onSubmit={handleSubmit} className='up'>
+        
         <div className="input-wrapper">
-          <label htmlFor="firstname">First Name</label>
+          
           <input
             name="firstname"
             type="text"
@@ -52,7 +49,7 @@ const SignUp = () => {
           />
         </div>
         <div className='input-wrapper'>
-          <label htmlFor="lastname">Last Name</label>
+          
           <input
           name='lastname'
           type='text'
@@ -63,7 +60,7 @@ const SignUp = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="email">Email</label>
+          
           <input
             name="email"
             type="email"
@@ -75,8 +72,8 @@ const SignUp = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="password">Password</label>
-          <input
+          
+          <input placeholder='password'
             name="password"
             type="password"
             onChange={handleChange}
@@ -86,8 +83,8 @@ const SignUp = () => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="confirmPassword">Confirm Password</label>
-          <input
+          
+          <input placeholder='confirmPassword'
             name="confirmPassword"
             type="password"
             onChange={handleChange}
@@ -96,7 +93,7 @@ const SignUp = () => {
             autoComplete="off"
           />
         </div>
-        <button
+        <button className='b-up'
           disabled={
             !formValues.firstname || 
             !formValues.lastname ||

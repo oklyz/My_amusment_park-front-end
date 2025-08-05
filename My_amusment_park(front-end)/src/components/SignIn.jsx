@@ -24,7 +24,7 @@ const SignIn = ({setUser, user}) => {
     <div className='sign-form'>
       <form className="sign-form" onSubmit={handleSubmit}>
         <div className="input-wrapper">
-          <label htmlFor="email">Email</label>
+          
           <input
             onChange={handleChange}
             id="email"
@@ -36,8 +36,8 @@ const SignIn = ({setUser, user}) => {
           />
         </div>
         <div className="input-wrapper">
-          <label htmlFor="password">Password</label>
-          <input
+          
+          <input placeholder="password"
             onChange={handleChange}
             type="password"
             id="password"
@@ -45,7 +45,7 @@ const SignIn = ({setUser, user}) => {
             required
           />
         </div>
-        <button disabled={!formValues.email || !formValues.password}>
+        <button className="b-in" disabled={!formValues.email || !formValues.password}>
           Sign In
         </button>
       </form>

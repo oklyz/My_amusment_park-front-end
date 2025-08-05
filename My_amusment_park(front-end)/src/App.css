@@ -284,10 +284,46 @@ header a {
 }
 
 
-.sign-form {
+.sign-form{
   display: flex;
+flex-direction:column ;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 10px;
+}
+.sign-form-up {
+  margin-top: -200px;
+  display: flex;
+flex-direction:column ;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
 }
+.pfp{
+  width: 300px;
+}
+.up{
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column ;
+}
+.input-wrapper input {
+border-radius: 30px;
+height: 34px;
+width: 300px;
+}
+.b-up{
+  border-radius: 30px;
+  width: 200px;
+  height: 30px;
+}
+.b-in{
+  border-radius: 30px;
+  width: 200px;
+  height: 30px;}
+
