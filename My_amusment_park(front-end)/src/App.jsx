@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 const App=()=> {
   const [user, setUser] = useState(null)
-  
+
   const checkToken = async () => {
     const user = await CheckSession()
     setUser(user)
@@ -34,7 +34,7 @@ const App=()=> {
   return (
     <>
       <Header user={user} handleLogOut={handleLogOut}/>
-    
+
       <Routes>
         <Route path="/sign-in" element={<SignIn setUser={setUser} user={user}/>}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>

@@ -18,7 +18,6 @@ const TicketForm =()=> {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormValues(initialState);
-    console.log('worked')
   };
 
   return (
