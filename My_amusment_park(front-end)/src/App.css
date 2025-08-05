@@ -1,89 +1,50 @@
+
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
 }
 
+
 header {
-  background-color: gray;
-  height: 25%;
+  background-color: #808080;
   display: flex;
-  position: sticky; top: 0;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  position: sticky;
+  top: 0;
 }
 
-header a{
+header a {
   margin: 10px;
 }
-.profile-button{
-  margin-right: 0%;
-  background-color: black;
-}
 
-
-.sign-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vh;
-}
-
-.game-card{
-  width: 20%;
-}
-
-.game-card img{
-  width: 100%;
-}
-
-.games-container{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.profile-page{
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.profile-page img{
-  width: 10%;
-  border-radius: 100%;
+.profile-button {
+  margin-right: 0;
+  background-color: #000000;
 }
 
 
 .home-container {
   width: 100%;
   height: 98vh;
-
   background-image: url('https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg');
-  background-size: cover;          
-  background-position: center;     
-  background-repeat: no-repeat;    
-  position: relative;               
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .button-container {
   height: 98vh;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .button-container button {
   padding: 20px;
-  background-color: yellow;
-  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ffff00;
   border-radius: 5px;
   border: none;
 }
@@ -93,22 +54,240 @@ header a{
   cursor: pointer;
 }
 
-.error-container {
-  font-family: Arial, sans-serif;
-  background: #f8d7da;
-  color: #721c24;
-  padding: 2em;
-  max-width: 600px;
-  margin: auto;
-  background: #f5c6cb;
-  padding: 2em;
-  border-radius: 8px;
+.games-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.error-container a {
-  color: #721c24;
-  text-decoration: underline;
-  }
+.games-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.game-card-link {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: block;
+}
+
+.game-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-image-container {
+  width: 100%;
+  aspect-ratio: 4/3; 
+  overflow: hidden;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.game-name {
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
+.game-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.game-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-image-container {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-info {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.game-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222222;
+}
+
+.game-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meta-item {
+  display: flex;
+  gap: 8px;
+}
+
+.meta-label {
+  font-weight: 600;
+  color: #444444;
+  min-width: 120px;
+}
+
+.meta-value {
+  color: #333333;
+}
+
+.rating {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.rating.everyone {
+  background-color: #4CAF50;
+}
+
+.rating.adults-only {
+  background-color: #F44336;
+}
+
+.rating.kids-only {
+  background-color: #FFC107;
+  color: #333333;
+}
+
+
+.services-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services-title {
+  text-align: center;
+  margin: 20px 0;
+  color: #333333;
+  font-size: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px #0000001a;
+  border: 1px solid #e0e0e0;
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  color: #222222;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  margin: 0 0 10px 0;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.service-info {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.service-info p {
+  margin: 5px 0;
+}
+
+.service-info strong {
+  color: #333333;
+}
+
+
+.profile-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-page img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+
+.sign-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}

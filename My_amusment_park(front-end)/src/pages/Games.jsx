@@ -1,20 +1,22 @@
-import gamesList from '../gamesList.json'
-import GameCard from '../components/GameCard'
-import { Link } from 'react-router-dom'
-const Games=()=> {
+import gamesList from '../gamesList.json';
+import GameCard from '../components/GameCard';
+
+
+const Games = () => {
   return (
-    <>
-    <h1>Game List</h1>
-    <div className='games-container'>
-      <div className='game-card'>
-        
-        {gamesList.map((game)=>(<Link to={`${game.id}`}>
-          <GameCard game={game} key={game.id}/>
-        </Link>))}
+    <div className="games-page">
+      <h1 className="games-title">Game List</h1>
+      <div className="games-grid">
+        {gamesList.map((game) => (
+          <GameCard 
+            game={game} 
+            key={game.id}
+            to={`/games/${game.id}`}
+          />
+        ))}
       </div>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Games
+export default Games;

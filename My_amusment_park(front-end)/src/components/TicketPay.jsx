@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TicketPay=()=> {
+const TicketPay=({values})=> {
   return (
     <div>TicketPay</div>
   )

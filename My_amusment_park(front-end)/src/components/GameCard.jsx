@@ -1,15 +1,20 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const GameCard=({game})=> {
+const GameCard = ({ game }) => {
   return (
-    <div>
-      <div>
-      <img src={game.image} alt={`poster for ${game.name}`} />
+    <NavLink to={`/games/${game.id}`} className="game-card-link">
+      <div className='game-card'>
+        <div className="game-image-container">
+          <img 
+            src={game.image} 
+            alt={`${game.name}`}
+          />
+        </div>
+        <h3 className="game-title">{game.name}</h3>
       </div>
-      <h2>{game.name}</h2>
-    </div>
-  )
-}
+    </NavLink>
+  );
+};
 
-export default GameCard
+export default GameCard;

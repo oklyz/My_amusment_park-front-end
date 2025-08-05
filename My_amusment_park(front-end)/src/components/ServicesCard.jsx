@@ -1,16 +1,27 @@
-import React from "react";
-
-const ServicesCard=({service})=> {
-  return( <div>
-    <div>
-      <img src={service.image} alt={`poster for ${service.name}`} />
+const ServicesCard = ({ service }) => {
+  return (
+    <div className="service-card">
+      <div className="card-image-container">
+        <img 
+          src={service.image} 
+          alt={service.name} 
+          className="service-image"
+        />
+      </div>
+      <div className="card-content">
+        <h2 className="service-name">{service.name}</h2>
+        <p className="service-description">{service.description}</p>
+        <div className="service-meta">
+          <span className="meta-label">Hours:</span>
+          <span className="meta-value">{service.availability}</span>
+        </div>
+        <div className="service-meta">
+          <span className="meta-label">Price Range:</span>
+          <span className="meta-value">{service.cost}</span>
+        </div>
+      </div>
     </div>
-  <h2>Name:{service.name}</h2>
-  <p>Description:{service.description}</p>
-  <h3>Price:{service.cost}</h3>
-  <h2>{service.availability}</h2>
-  </div>
-  )
-}
+  );
+};
 
 export default ServicesCard;
