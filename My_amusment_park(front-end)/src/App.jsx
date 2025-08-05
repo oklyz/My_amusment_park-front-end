@@ -7,10 +7,11 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Services from "./pages/Services";
 import TicketForm from "./components/TicketForm";
+import  Profile  from './pages/Profile';
 import { CheckSession } from "./services/auth";
 import { useEffect, useState } from "react";
 
-function App() {
+const App=()=> {
   const [user, setUser] = useState(null)
   
   const checkToken = async () => {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/Services" element={<Services/>}></Route>
         <Route path="/Games" element={<Games />}></Route>
         <Route path="/buy-tickets" element={<TicketForm/>}></Route>
+        <Route path="/profile" element={<Profile user={user}/>}></Route>
       </Routes>
 
     </>

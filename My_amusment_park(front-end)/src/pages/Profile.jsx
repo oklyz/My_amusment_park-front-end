@@ -1,11 +1,11 @@
 import React from "react";
 
-function Profile({user}) {
+const Profile =({user})=> {
   return (
   <div className="profile-page">
-    <img src={user.avatar} alt={`${user.firstname} ${user.lastname} avatar`} /> 
-     <h3>First Name: {user.firstname}</h3>
-     <h3>Last Name: {user.lastname}</h3>
+    <img src={`image.png`} alt={`${user.firstName} ${user.lastName} avatar`} /> 
+     <h3>First Name: {user.firstName}</h3>
+     <h3>Last Name: {user.lastName}</h3>
      <h3>Email: {user.email}</h3>         
   </div>
   )

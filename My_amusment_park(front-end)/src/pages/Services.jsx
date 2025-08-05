@@ -1,6 +1,6 @@
 import services from '../services.json'
 import ServicesCard from '../components/ServicesCard';
-function Services() {
+const Services =()=> {
   return <div>
 <h1>Services List</h1>
       <div>
