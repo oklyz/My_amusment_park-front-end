@@ -6,13 +6,35 @@ import Games from "./pages/Games"
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Services from "./pages/Services";
+import { CheckSession } from "./services/auth";
+import { useEffect, useState } from "react";
+
 function App() {
+  const [user, setUser] = useState(null)
+  
+  const checkToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    if (token) {
+      checkToken()
+    }
+  }, [])
+
+  const handleLogOut = () => {
+    setUser(null)
+    localStorage.clear()
+  }
+
   return (
     <>
-      <Header />
+      <Header user={user} handleLogOut={handleLogOut}/>
     
       <Routes>
-        <Route path="/sign-in" element={<SignIn />}></Route>
+        <Route path="/sign-in" element={<SignIn setUser={setUser} user={user}/>}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/sign-out"></Route>
         <Route path="/" element={<Home />}></Route>
