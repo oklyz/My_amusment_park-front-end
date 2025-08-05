@@ -1,16 +1,34 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-function Header() {
+function Header({ handleLogOut, user }) {
+  
+  let userOptions
+
+  if (user) {
+    userOptions = (
+      <header>
+        <NavLink onClick={handleLogOut} to="/sign-out">Sign-Out</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Games">Games</NavLink>
+        <NavLink to="/Services">Services</NavLink>
+        <NavLink to="/buy-tickets">Tickets</NavLink>
+      </header>
+    )
+  } else {
+    userOptions = (
+      <header>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Games">Games</NavLink>
+        <NavLink to="/Services">Services</NavLink>
+        <NavLink to="/sign-up">Sign-up</NavLink>
+        <NavLink to="/sign-in">Sign-in</NavLink>
+      </header>
+    )
+  }
   return (
-    <header>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/Games">Games</NavLink>
-      <NavLink to="/Services">Services</NavLink>
-      <NavLink to="/Buy-Ticket">Tickets</NavLink>
-      <NavLink to="/sign-up">Sign-up</NavLink>
-      <NavLink to="/sign-in">Sign-in</NavLink>
-      <NavLink to="/sign-out">Sign-Out</NavLink>
-    </header>
+    <>
+    {user ? userOptions : userOptions}
+    </>
   );
 }
 

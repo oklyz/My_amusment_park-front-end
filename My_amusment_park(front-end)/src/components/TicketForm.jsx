@@ -7,11 +7,11 @@ function TicketForm() {
     <label htmlFor="type">Type of ticket</label>
     <select name="type" >
       <option value="VIP"></option>
-      
+      <option value="Normal"></option>
     </select>
     </form>
     </div>
-  )
+  ) 
 }
 
 export default TicketForm;
