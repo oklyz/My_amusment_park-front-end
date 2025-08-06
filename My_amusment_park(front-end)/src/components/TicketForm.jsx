@@ -23,34 +23,41 @@ const TicketForm = ({ user, handleSubmit }) => {
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e, formValues)}>
-      <label>Type of ticket</label>
-      <select name="type" value={formValues.type} onChange={handleChange}>
-        <option value="Normal">Normal</option>
-        <option value="VIP">VIP</option>
-      </select>
+    <div className="ticket-form-container">
+      <form
+        className="ticket-form"
+        onSubmit={(e) => handleSubmit(e, formValues)}
+      >
+        <h2 className="form-title">Buy Your Ticket</h2>
 
-      <label>Select a date</label>
-      <input
-        type="date"
-        name="date"
-        min={tomorrow}
-        value={formValues.date}
-        onChange={handleChange}
-      />
+        <label>Type of Ticket</label>
+        <select name="type" value={formValues.type} onChange={handleChange}>
+          <option value="Normal">Normal</option>
+          <option value="VIP">VIP</option>
+        </select>
 
-      <label>How many tickets?</label>
-      <input
-        type="number"
-        name="amount"
-        min={1}
-        max={99}
-        value={formValues.amount}
-        onChange={handleChange}
-      />
+        <label>Select a Date</label>
+        <input
+          type="date"
+          name="date"
+          min={tomorrow}
+          value={formValues.date}
+          onChange={handleChange}
+        />
 
-      <button type="submit">Proceed for payment</button>
-    </form>
+        <label>How Many Tickets?</label>
+        <input
+          type="number"
+          name="amount"
+          min={1}
+          max={99}
+          value={formValues.amount}
+          onChange={handleChange}
+        />
+
+        <button type="submit">Proceed for Payment</button>
+      </form>
+    </div>
   );
 };
 
