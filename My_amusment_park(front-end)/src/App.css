@@ -118,7 +118,6 @@ header a {
 }
 
 .game-details-container {
-  
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -323,7 +322,6 @@ header a {
   height: 30px;
 }
 
-<<<<<<< HEAD
 a {
   text-decoration: none;
   color: #000000;
@@ -343,7 +341,6 @@ a {
   height: 100%;
   width: 100%;
 }
-=======
 .ticket-pay-container {
   display: flex;
   justify-content: center;
@@ -519,4 +516,3 @@ a {
 .ticket-form button:hover {
   background: #0056b3;
 }
->>>>>>> manaf-feature
