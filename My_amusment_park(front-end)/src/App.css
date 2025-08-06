@@ -2,6 +2,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
 }
 
 
@@ -301,7 +303,7 @@ flex-direction:column ;
   gap: 10px;
 }
 .sign-form-up {
-  margin-top: -200px;
+  
   display: flex;
 flex-direction:column ;
   justify-content: center;
@@ -313,6 +315,13 @@ flex-direction:column ;
   width: 300px;
 }
 .up{
+  
+  margin: 0;
+  height: 380px;
+  width: 350px;
+  border-radius:12px ;
+  border: solid rgb(104, 58, 58) 2px;
+  background-color: #f44336;
   gap: 10px;
   display: flex;
   justify-content: center;
@@ -320,14 +329,19 @@ flex-direction:column ;
   flex-direction:column ;
 }
 .input-wrapper input {
+  background: transparent;
+  border: 2px solid rgb(116, 176, 190);
+  
 border-radius: 30px;
 height: 34px;
-width: 300px;
+width: 260px;
 }
 .b-up{
+  
   border-radius: 30px;
-  width: 200px;
-  height: 30px;
+  width: 260px;
+  height: 34px;
+  cursor: pointer;
 }
 .b-in{
   border-radius: 30px;
