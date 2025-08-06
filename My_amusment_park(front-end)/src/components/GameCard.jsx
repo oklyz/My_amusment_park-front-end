@@ -6,7 +6,7 @@ const GameCard = ({ game }) => {
     <NavLink to={`/games/${game.id}`} className="game-card-link">
       <div className='game-card'>
         <div className="game-image-container">
-          <img 
+          <img className='card-images' 
             src={game.image} 
             alt={`${game.name}`}
           />

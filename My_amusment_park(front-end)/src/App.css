@@ -128,6 +128,7 @@ header a {
 
 
 .game-details-container {
+  
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -334,3 +335,22 @@ width: 300px;
   width: 200px;
   height: 30px;}
 
+a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.card-images {
+  height: 100%;
+  width: 100%;
+}
+
+.game-detail-image {
+  height: 100%;
+  width: 100%;
+}
