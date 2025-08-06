@@ -538,3 +538,34 @@ a {
 .ticket-form button:hover {
   background: #0056b3;
 }
+
+.profile-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg");
+}
+
+.profile-page button{
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 3px;
+  height: 40px;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  border-radius: 15px;
+  padding: 20px;
+  color: lightgreen;
+}
+
