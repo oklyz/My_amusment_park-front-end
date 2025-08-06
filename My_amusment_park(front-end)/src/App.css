@@ -32,7 +32,6 @@ header a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
 }
 
 .button-container {
@@ -57,7 +56,15 @@ header a {
 .games-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px;  
+
+}
+
+.background-container {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .games-title {
