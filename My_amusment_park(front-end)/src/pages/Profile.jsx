@@ -15,14 +15,18 @@ const Profile =({ user, setUser })=> {
   }
 
   return (
-  <div className="profile-page">
-    <img src={`image.png`} alt={`${user.firstName} ${user.lastName} avatar`} /> 
-    <h3>First Name: {user.firstName}</h3>
-    <h3>Last Name: {user.lastName}</h3>
-    <h3>Email: {user.email}</h3>
-    <Link to="/">
-    <button onClick={handleClick}>Delete Account</button>         
-    </Link>
+  <div className="profile-container">
+    <div className="profile-page">
+      <div className="profile-details">
+        <img src={`image.png`} alt={`${user.firstName} ${user.lastName} avatar`} />
+        <h3>First Name: {user.firstName}</h3>
+        <h3>Last Name: {user.lastName}</h3>
+        <h3>Email: {user.email}</h3>
+        <Link to="/">
+        <button onClick={handleClick}>Delete Account</button>         
+        </Link>
+      </div>
+    </div>
   </div>
   )
 }
