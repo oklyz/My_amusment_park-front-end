@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import TicketForm from "../components/TicketForm";
 import TicketPay from "../components/TicketPay";
 
-const BuyTicket = ({user}) => {
+const BuyTicket = ({ user }) => {
   const [submittedData, setSubmittedData] = useState(null);
 
-  if (submittedData) {
-    return <TicketPay values={submittedData} />;
-  }
-
-  return (
-    <TicketForm user={user} onSubmit={(data) => setSubmittedData(data) } />
-  );
+  const handleSubmit = (e, data) => {
+    e.preventDefault();
+    setSubmittedData(data);
+  };
+  if (submittedData) return <TicketPay values={submittedData} />;
+  else return <TicketForm user={user} handleSubmit={handleSubmit} />;
 };
 
 export default BuyTicket;
