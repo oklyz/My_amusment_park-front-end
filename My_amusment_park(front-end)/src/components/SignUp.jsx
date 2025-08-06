@@ -36,7 +36,7 @@ const SignUp = () => {
     <div className='sign-form-up'>
       
       <form onSubmit={handleSubmit} className='up'>
-        
+        <h1>Sing up</h1>
         <div className="input-wrapper">
           
           <input
@@ -104,6 +104,7 @@ const SignUp = () => {
         </button>
       </form>
     </div>
+    
   )
 }
 

@@ -22,7 +22,8 @@ const SignIn = ({setUser, user}) => {
 
   return (
     <div className='sign-form'>
-      <form className="sign-form" onSubmit={handleSubmit}>
+      <form className="up" onSubmit={handleSubmit}>
+        <h1>Sing in</h1>
         <div className="input-wrapper">
           
           <input
