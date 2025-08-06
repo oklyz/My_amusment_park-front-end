@@ -569,3 +569,8 @@ a {
   color: lightgreen;
 }
 
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
