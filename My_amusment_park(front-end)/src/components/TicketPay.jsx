@@ -1,11 +1,17 @@
 import React from "react";
-
-const TicketPay = ({ values }) => {
+import { useNavigate } from "react-router-dom";
+const TicketPay = ({ values, showTicketPage }) => {
+  console.log(values);
   const ticketPrice = values.type === "VIP" ? 20 : 10;
   const subtotal = ticketPrice * values.amount;
-  const tax = subtotal * 0.05; // 5% tax
-  const serviceFee = 2; // flat service fee
+  const tax = subtotal * 0.05;
+  const serviceFee = 2;
   const total = subtotal + tax + serviceFee;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    showTicketPage();
+  };
 
   return (
     <div className="ticket-pay-form">
@@ -38,7 +44,7 @@ const TicketPay = ({ values }) => {
         <h3>Total: ${total.toFixed(2)}</h3>
       </div>
 
-      <form className="payment-form">
+      <form className="payment-form" onSubmit={handleSubmit}>
         <h4>Payment Method</h4>
         <select required className="payment-method">
           <option value="">Select Payment Method</option>

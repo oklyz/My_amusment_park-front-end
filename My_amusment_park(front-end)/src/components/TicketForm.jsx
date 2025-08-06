@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { createTicket } from "../services/Ticket";
-
 const TicketForm = ({ user, handleSubmit }) => {
   let tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
