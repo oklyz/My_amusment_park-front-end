@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { createTicket } from "../services/Ticket";
+
 const TicketPay = ({ values, showTicketPage }) => {
   console.log(values);
   const ticketPrice = values.type === "VIP" ? 20 : 10;
@@ -10,6 +12,9 @@ const TicketPay = ({ values, showTicketPage }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    for (let i = 0; i < values.amount ; i++) {
+      createTicket(values)
+    }
     showTicketPage();
   };
 

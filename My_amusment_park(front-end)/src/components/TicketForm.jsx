@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createTicket } from "../services/Ticket";
+
 const TicketForm = ({ user, handleSubmit }) => {
   let tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
@@ -18,6 +18,7 @@ const TicketForm = ({ user, handleSubmit }) => {
   const [formValues, setFormValues] = useState(initialState);
 
   const handleChange = (e) => {
+    
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
