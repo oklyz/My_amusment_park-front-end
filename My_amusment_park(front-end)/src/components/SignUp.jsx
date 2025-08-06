@@ -32,11 +32,11 @@ const SignUp = () => {
     navigate('/sign-in')
   }
 
-  return (
+  return (<div className='background-container'>
     <div className='sign-form-up'>
       
       <form onSubmit={handleSubmit} className='up'>
-        <h1>Sing up</h1>
+        <h1>Sign up</h1>
         <div className="input-wrapper">
           
           <input
@@ -103,7 +103,7 @@ const SignUp = () => {
               >Sign up
         </button>
       </form>
-    </div>
+    </div></div>
     
   )
 }
