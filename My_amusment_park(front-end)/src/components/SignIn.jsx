@@ -20,9 +20,10 @@ const SignIn = ({setUser, user}) => {
     }
   };
 
-  return (
+  return (<div className='background-container'>
     <div className='sign-form'>
-      <form className="sign-form" onSubmit={handleSubmit}>
+      <form className="up" onSubmit={handleSubmit}>
+        <h1>Sign in</h1>
         <div className="input-wrapper">
           
           <input
@@ -49,7 +50,7 @@ const SignIn = ({setUser, user}) => {
           Sign In
         </button>
       </form>
-    </div>
+    </div></div>
   );
 };
 

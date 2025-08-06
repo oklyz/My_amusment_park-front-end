@@ -1,9 +1,9 @@
-
 body {
   margin: 0;
   padding: 0;
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
 }
-
 
 header {
   background-color: #808080;
@@ -19,16 +19,10 @@ header a {
   margin: 10px;
 }
 
-.profile-button {
-  margin-right: 0;
-  background-color: #000000;
-}
-
-
 .home-container {
   width: 100%;
   height: 98vh;
-  background-image: url('https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg');
+  background-image: url("https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,12 +50,11 @@ header a {
 .games-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;  
-
+  padding: 20px;
 }
 
 .background-container {
-  background-image: url('https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg');
+  background-image: url("https://images.squarespace-cdn.com/content/v1/58a8fce4f5e23130912e3619/1617977630032-N5KRXMHXEE604I0BNAJO/phoenix+day+time.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,7 +85,7 @@ header a {
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -100,7 +93,7 @@ header a {
 
 .game-image-container {
   width: 100%;
-  aspect-ratio: 4/3; 
+  aspect-ratio: 4/3;
   overflow: hidden;
 }
 
@@ -126,9 +119,7 @@ header a {
   justify-content: center;
 }
 
-
 .game-details-container {
-  
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -198,18 +189,17 @@ header a {
 }
 
 .rating.everyone {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .rating.adults-only {
-  background-color: #F44336;
+  background-color: #f44336;
 }
 
 .rating.kids-only {
-  background-color: #FFC107;
+  background-color: #ffc107;
   color: #333333;
 }
-
 
 .services-page {
   max-width: 1200px;
@@ -257,6 +247,7 @@ header a {
 }
 
 .card-content p {
+  
   margin: 0 0 10px 0;
   color: #555555;
   font-size: 0.9rem;
@@ -276,7 +267,6 @@ header a {
   color: #333333;
 }
 
-
 .profile-page {
   width: 100%;
   height: 100%;
@@ -291,10 +281,9 @@ header a {
   border-radius: 50%;
 }
 
-
-.sign-form{
+.sign-form {
   display: flex;
-flex-direction:column ;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -302,38 +291,58 @@ flex-direction:column ;
   gap: 10px;
 }
 .sign-form-up {
-  margin-top: -200px;
+  
   display: flex;
-flex-direction:column ;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
 }
-.pfp{
+.pfp {
   width: 300px;
 }
+
 .up{
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  height: 380px;
+  width: 350px;
+  border-radius:12px ;
+  background-color: white;
   gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction:column ;
+  flex-direction: column;
 }
 .input-wrapper input {
+  border: 2px solid #007bff;
 border-radius: 30px;
 height: 34px;
-width: 300px;
+width: 260px;
 }
-.b-up{
+
+.b-up {
+  
+border-radius: 30px;
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+  background-color: #007bff;
+  color: white;
+}
+.b-in {
   border-radius: 30px;
   width: 200px;
   height: 30px;
+  transition: background 0.3s;
+  border: none;
+  background-color: #007bff;
+  color: white;
 }
-.b-in{
-  border-radius: 30px;
-  width: 200px;
-  height: 30px;}
 
 a {
   text-decoration: none;
@@ -353,4 +362,179 @@ a {
 .game-detail-image {
   height: 100%;
   width: 100%;
+}
+.ticket-pay-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+.ticket-pay-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-pay-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.bill-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.bill-details p {
+  margin: 6px 0;
+}
+
+.bill-details hr {
+  margin: 12px 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.total {
+  text-align: right;
+  color: #222;
+  margin-top: 10px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-form h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.payment-form input,
+.payment-form select {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.payment-form input:focus,
+.payment-form select:focus {
+  border-color: #007bff;
+}
+
+.pay-btn {
+  width: 30%;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.pay-btn:hover {
+  background: #0056b3;
+}
+
+.ticket-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f9f9f9;
+  height: 80 vh;
+}
+
+.ticket-form {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ticket-form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #444;
+}
+
+.ticket-form input,
+.ticket-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+  border-color: #007bff;
+}
+
+.ticket-form button {
+  margin-top: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.ticket-form button:hover {
+  background: #0056b3;
 }
