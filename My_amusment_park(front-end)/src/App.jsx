@@ -45,7 +45,7 @@ const App=()=> {
         <Route path="/Games" element={<Games />}></Route>
         <Route path="/buy-tickets" element={<BuyTicket user={user}/>}></Route>
         <Route path="Games/:id" element={<GameDetails/>}></Route>
-        <Route path="/profile" element={<Profile user={user}/>}></Route>
+        <Route path="/profile" element={<Profile user={user} setUser={setUser}/>}></Route>
 
       </Routes>
 

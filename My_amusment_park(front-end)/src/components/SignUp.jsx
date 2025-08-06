@@ -22,11 +22,13 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log(formValues)
     await RegisterUser({
       firstName: formValues.firstname,
       lastName: formValues.lastname,
       password: formValues.password,
-      email: formValues.email
+      email: formValues.email,
+      confirmPassword: formValues.confirmPassword
     })
     setFormValues(initialState)
     navigate('/sign-in')
